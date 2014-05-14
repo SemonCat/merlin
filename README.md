@@ -13,7 +13,7 @@ If you're using gradle all you need is this :
 
 ```groovy
 dependencies {
-    compile "com.novoda.merlin:I_NEED_TO_UPLOAD_THIS:0.5"
+    compile "com.github.semoncat.merlin:library:0.5"
 }
 ``` 
 

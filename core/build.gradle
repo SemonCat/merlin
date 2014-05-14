@@ -1,7 +1,10 @@
 apply plugin: 'android-library'
 
-android {
+dependencies {
+    compile 'com.github.kevinsawicki:http-request:+'
+}
 
+android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 19
@@ -11,11 +14,6 @@ android {
 
     compileSdkVersion 19
     buildToolsVersion '19.0.3'
-
 }
 
-
-dependencies {
-    compile ('com.github.kevinsawicki:http-request:+')
-
-}
+apply from: 'https://raw.githubusercontent.com/aectann/gradle-mvn-push/44a1e74d01afd31ae1b78e6d85d1ab992295bb82/gradle-mvn-push.gradle'
