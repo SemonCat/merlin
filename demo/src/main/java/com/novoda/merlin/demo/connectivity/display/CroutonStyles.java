@@ -4,6 +4,7 @@ import android.app.Activity;
 
 import com.novoda.merlin.demo.R;
 
+import de.keyboardsurfer.android.widget.crouton.Configuration;
 import de.keyboardsurfer.android.widget.crouton.Style;
 
 public enum CroutonStyles {
@@ -37,14 +38,14 @@ public enum CroutonStyles {
 
     private static Style createConnectedStyle(Activity activity) {
         return new Style.Builder()
-                .setDuration(CONNECTED_CROUTON_DURATION)
+                .setConfiguration(new Configuration.Builder().setDuration(CONNECTED_CROUTON_DURATION).build())
                 .setBackgroundColorValue(Style.holoBlueLight)
                 .build();
     }
 
     private static Style createDisconnectedStyle(Activity activity) {
         return new Style.Builder()
-                .setDuration(Style.DURATION_INFINITE)
+                .setConfiguration(new Configuration.Builder().setDuration(Configuration.DURATION_INFINITE).build())
                 .setBackgroundColorValue(Style.holoRedLight)
                 .build();
     }

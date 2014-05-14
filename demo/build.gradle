@@ -1,16 +1,27 @@
 apply plugin: 'android'
 
-dependencies {
-
-    compile project(':core')
-
-    compile 'de.keyboardsurfer.android.widget:crouton:1.7'
-
-}
 
 android {
 
-    compileSdkVersion 17
-    buildToolsVersion "17"
+    compileSdkVersion 19
+    buildToolsVersion '19.0.3'
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 19
+        versionCode 1
+        versionName "0.5-demo"
+    }
+}
+
+dependencies {
+
+    compile project(':core')
+    compile('de.keyboardsurfer.android.widget:crouton:1.8.4') {
+        // exclusion is not neccessary, but generally a good idea.
+        exclude group: 'com.google.android', module: 'support-v4'
+    }
+
+
 
 }
